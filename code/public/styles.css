@@ -1,168 +1,113 @@
-body    {
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Merriweather&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #808080;
+    background: #ff9966;
 }
 
 .wrapper {
-    width: 450px;
+    width: 450ps;
     background: #ffe6e6;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-header  {
-    padding: 0 20px;
+header {
     display: flex;
     align-items: center;
+    padding: 25px 30px 10px;
     justify-content: space-between;
 }
 
-header > .month-year    {
-    font-size: 1.5rem;
-    font-weight: 600;
+header > .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
 }
 
-.change-month   {
-    font-size: 1.6rem;
-    font-weight: 600;
+header > .icons > span {
+    height: 38px;
+    width: 38px;
+    color: #666666;
+    font-size: 1.9rem;
+    margin: 0 1px;
     cursor: pointer;
-    padding: 0 14px;
     text-align: center;
     line-height: 38px;
-    border-radius: 5px;
+    border-radius: 50%;
+    background: #fbb6b6;
 }
 
-.change-month:hover {
-    background: #f9d2d2;
+header > .icons > span:hover {
+    background: #ff8080;
 }
 
-.calendar   {
-    padding: 20px 30px 0 0;
+header > .icons > span:last-child {
+    margin-right: -10px
 }
 
-.calendar > ul   {
-    list-style: none;
+.calendar {
+    padding: 20px
+}
+
+.calendar > ul {
     display: flex;
+    list-style: none;
     flex-wrap: wrap;
+    text-align: center;
+}
+
+.calendar > .weeks > li {
+    font-weight: 500;
+}
+
+.calendar > .days {
+    margin-bottom: 20px;
 }
 
 .calendar > ul > li {
     position: relative;
     width: calc(100% / 7);
-    text-align: center;
 }
 
-.weeks >  li    {
-    font-weight: 550;
-}
-
-.days   {
-    /*margin: 0 0 20px 0;*/
-}
-
-.days > li  {
-    height: 32px;
-    width: 32px;
-    padding: 14px 0 10px 0;
+.calendar > .days > li {
+    z-index: 1;
     cursor: pointer;
-    margin: auto;
-    border-radius: 5px;
-}
-
-.days > li:hover    {
-    background: #f9d2d2;
-}
-
-.days > li.active   {
-    background: #ff6666
-}
-
-.days > li.inactive  {
-    color: #aaaaaa;
-}
-
-
-
-/*header {
-    padding: 25px 30px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header > .current-date  {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.change-month  {
-    height: 38px;
-    width: 48px;
-    font-size: 2rem;
-    padding: 0 14px;
-    margin: 0 1px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 5px;
-}
-
-.change-month:hover {
-    background: #f9d2d2;
-}
-
-.calendar   {
-    padding: 20px;
-}
-
-.calendar > ul  {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.days   {
-    margin-bottom: 20px;
-}
-
-.weeks > li {
-    font-weight: 500;
-}
-
-.calendar > ul > li {
-    position: relative;
-    width: calc(100% / 7)
-}
-
-.days > li  {
     margin-top: 30px;
-    cursor: pointer;
 }
 
-.days > li.inactive {
-    color: #aaaaaa;
+.calendar > .days > li.inactive {
+    color: #aaa;
 }
 
-.days > li::before  {
+.calendar > .days > li.active {
+    color: #fff;
+}
+
+.calendar > .days > li::before {
     position: absolute;
     content: "";
     height: 40px;
     width: 40px;
     top: 50%;
     left: 50%;
-    border-radius: 5px;
+    z-index: -1;
+    border-radius: 50%;
     transform: translate(-50%, -50%);
-
-
+    /*background: #ffcccc;*/
 }
 
-.days > li:hover::before    {
-    background: #f9d2d2;
+.calendar > .days > li:hover::before {
+    background: #ffcccc;
 }
 
-.days > li.active::before   {
-    background: #ff6666;
-}*/
+.calendar > .days > li.active::before {
+    background: #ff4d4d;
+}
