@@ -14,7 +14,7 @@ Welcome to the Simple JavaScript Calendar App! This lightweight calendar applica
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/simple-calendar-app.git
+   git clone https://github.com/S4MU3L6R360RY/simple-calendar-app.git
    ```
 
 2. Open the `index.html` file in your preferred web browser.
