@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="header">
+            <button id="prev-month">&#9665;</button>
+            <span id="month-year"></span>
+            <button id="next-month">&#9655;</button>
+        </div>
+
+        <div class="month-view">
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days"></div>
+        </div>
+
+        <div class="day-view">
+            <button id="back-btn">Back</button>
+            <h2 id="selected-date"></h2>
+
+            <div class="event-panel">
+                <h3>Events</h3>
+                <button id="add-event">Add Event</button>
+                <div id="event-form" class="hidden">
+                    <input type="text" id="event-title" placeholder="Event Name">
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time">
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time">
+                    <button id="save-event">Save</button>
+                </div>
+                <ul id="event-list"></ul>
+            </div>
+        </div>
+
+        <div class="widgets">
+            <div class="event-widget">📅 Events: <span id="event-count">0</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
